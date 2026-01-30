@@ -2,21 +2,13 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
-    <nav
-      style={{
-        padding: "10px",
-        backgroundColor: "#333",
-        display: "flex",
-        gap: "20px",
-      }}
-    >
-      <Link to="/" style={{ color: "white", textDecoration: "none" }}>
-        Home
-      </Link>
+    <nav className="navbar">
+      <h2 className="logo">Blog App</h2>
 
-      <Link to="/create" style={{ color: "white", textDecoration: "none" }}>
-        Create Blog
-      </Link>
+      <div className="links">
+        <Link to="/login" className="nav-link">Login</Link>
+        <Link to="/signup" className="nav-link">Signup</Link>
+      </div>
     </nav>
   );
 };

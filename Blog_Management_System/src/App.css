@@ -1,27 +1,144 @@
+/* ---------- Global Styles ---------- */
 body {
-  font-family: Arial, sans-serif;
-  background: #f4f4f4;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f6f8;
 }
 
+/* ---------- Navbar ---------- */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 30px;
+  background: linear-gradient(90deg, #1d2671, #c33764);
+}
+
+.logo {
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* Navbar Links (Login, Signup, Home, Create, Logout) */
+.links {
+  display: flex;
+  align-items: center;
+  gap: 25px; /* GAP BETWEEN LOGIN & SIGNUP */
+}
+
+.links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.links a:hover {
+  color: #ffe082;
+}
+
+/* Logout Button */
+.links button {
+  background-color: #ff5252;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.links button:hover {
+  background-color: #ff1744;
+}
+
+/* ---------- Page Container ---------- */
 .container {
   width: 60%;
-  margin: auto;
+  margin: 30px auto;
 }
 
+/* ---------- Blog Card ---------- */
 .card {
-  background: white;
+  background-color: white;
   padding: 15px;
-  margin: 10px 0;
-  border-radius: 5px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-input, textarea {
+.card h3 {
+  margin-top: 0;
+}
+
+/* Blog Action Buttons */
+.card a {
+  margin-right: 15px; /* GAP BETWEEN VIEW & EDIT */
+  color: #1d2671;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.card a:hover {
+  text-decoration: underline;
+}
+
+.card button {
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background-color: #b71c1c;
+}
+
+/* ---------- Forms ---------- */
+form {
+  background-color: white;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+input,
+textarea {
   width: 100%;
   padding: 8px;
-  margin: 5px 0;
+  margin-bottom: 12px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
 }
 
 button {
-  padding: 6px 10px;
+  background-color: #1d2671;
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 4px;
   cursor: pointer;
+}
+
+button:hover {
+  background-color: #0f144a;
+}
+
+/* ---------- Headings ---------- */
+h1,
+h2 {
+  color: #1d2671;
+}
+.links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  margin-left: 25px;   /* 👈 SPACE BETWEEN LOGIN & SIGNUP */
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
 }

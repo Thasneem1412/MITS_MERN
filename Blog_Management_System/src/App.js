@@ -1,24 +1,36 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { getCurrentUser } from "./Utils/auth";
 
-import Navbar from "./Components/Navbar";
-import Home from "./Pages/Home";
-import CreateBlog from "./Pages/CreateBlog";
-import EditBlog from "./Pages/EditBlog";
-import ViewBlog from "./Pages/ViewBlog";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import CreateBlog from "./pages/CreateBlog";
+import Login from "./Pages/Login";
+import Signup from "./Pages/Signup";
+import "./App.css";
+
 
 function App() {
+  const user = getCurrentUser();
+
   return (
     <Router>
-      {/* Navigation Bar */}
       <Navbar />
 
-      {/* Page Routes */}
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/create" element={<CreateBlog />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+
+        <Route
+          path="/"
+          element={user ? <Home /> : <Navigate to="/login" />}
+        />
+
+        <Route
+          path="/create"
+          element={user ? <CreateBlog /> : <Navigate to="/login" />}
+        />
       </Routes>
     </Router>
-    
   );
 }
 
