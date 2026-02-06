@@ -7,15 +7,15 @@ body {
 
 /* ---------- Navbar ---------- */
 .navbar {
-  display: flex;
+display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 14px 30px;
-  background: linear-gradient(90deg, #1d2671, #c33764);
+  background: #1e293b;
+  padding: 12px 30px;
 }
 
 .logo {
-  color: #ffffff;
+  color: #fff;
   font-size: 22px;
   font-weight: bold;
 }

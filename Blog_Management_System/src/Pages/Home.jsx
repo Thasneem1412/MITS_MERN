@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { getBlogs, deleteBlog } from "../Utils/localStorage";
 
 const Home = () => {
-  const [blogs, setBlogs] = useState([]);
+  const [blogs, setBlogs] = useState(["Hello"]);
 
   useEffect(() => {
     setBlogs(getBlogs());
